@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POVERTY KILLER</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#0b1220;color:white}
+header{padding:24px 18px;background:#101d32;text-align:center}
+h1{color:#4ade80;margin-bottom:8px}
+.hero{text-align:center;padding:45px 20px}
+.hero h2{font-size:32px}
+p{line-height:1.6;color:#cbd5e1}
+button{background:#22c55e;border:0;padding:13px 18px;border-radius:8px;font-weight:bold;cursor:pointer}
+main{max-width:900px;margin:auto;padding:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#17243a;padding:20px;border-radius:12px}
+.card h3{color:#4ade80}
+input,textarea{width:100%;padding:12px;margin:7px 0 14px;border-radius:7px;border:1px solid #64748b;background:#0b1220;color:white}
+section{margin:25px 0}
+footer{text-align:center;padding:25px;color:#94a3b8}
+a{color:#4ade80}
+</style>
+</head>
+<body>
+<header>
+<h1>POVERTY KILLER</h1>
+<p>Opportunities. Skills. Hope. A better future.</p>
+</header>
+<div class="hero">
+<h2>Build a Better Future</h2>
+<p>Discover ways to learn skills, find work and start building your future.</p>
+<button onclick="document.getElementById('opportunities').scrollIntoView({behavior:'smooth'})">Explore Opportunities</button>
+</div>
+<main>
+<section id="opportunities">
+<h2>Explore Opportunities</h2>
+<div class="cards">
+<div class="card"><h3>💼 Find Work</h3><p>Explore job-search resources and employment opportunities.</p><a href="https://www.careers24.com/" target="_blank" rel="noopener">Explore jobs</a></div>
+<div class="card"><h3>📚 Learn Skills</h3><p>Discover free learning materials to improve your skills.</p><a href="https://www.khanacademy.org/" target="_blank" rel="noopener">Start learning</a></div>
+<div class="card"><h3>🚀 Start a Business</h3><p>Learn the basics of planning a small business.</p><a href="https://www.seda.org.za/" target="_blank" rel="noopener">Business support</a></div>
+<div class="card"><h3>🌱 Fight Poverty</h3><p>Take small steps towards education, opportunity and financial independence.</p><a href="https://www.gov.za/" target="_blank" rel="noopener">Government resources</a></div>
+</div>
+</section>
+<section>
+<h2>Make a Plan</h2>
+<p>Write down one goal you want to achieve. Your plan stays on this page only while it remains open.</p>
+<textarea id="goal" rows="4" placeholder="My goal is..."></textarea>
+<button onclick="showGoal()">Save My Goal</button>
+<p id="result" aria-live="polite"></p>
+</section>
+<section>
+<h2>About POVERTY KILLER</h2>
+<p>POVERTY KILLER is a project designed to help people discover learning resources, employment links and business support. It aims to make useful opportunities easier to find.</p>
+</section>
+</main>
+<footer>POVERTY KILLER © 2026 · Created to inspire opportunity</footer>
+<script>
+function showGoal(){
+const goal=document.getElementById('goal').value.trim();
+document.getElementById('result').textContent=goal?'Your goal: '+goal:'Please write a goal first.';
+}
+</script>
+</body>
+  </html>
